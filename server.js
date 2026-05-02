@@ -12,6 +12,7 @@ const multer = require('multer');
 const productRoutes = require('./routes/productRoutes');
 
 const app = express();
+app.set('trust proxy', 1);
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/eco_products';
 const CLIENT_ORIGIN = process.env.CLIENT_ORIGIN || '*';
